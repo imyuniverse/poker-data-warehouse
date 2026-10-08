@@ -1,0 +1,18 @@
+column,type,description
+player_id,string,Unique player id
+skill,float,"SKILL: true long-run edge (0-10) — small per-event, compounds over volume"
+bankroll_mgmt,float,MANAGEMENT: discipline in stake/roll selection (0-10)
+tilt_control,float,SKILL/behaviour: emotional-leak control (0-10)
+study_hours_week,float,SKILL: study/practice hours per week
+tournaments_played,int,VOLUME: tournaments in the sample (variance washes out with volume)
+avg_field_size,int,VARIANCE: average field size (bigger = more top-heavy = more variance)
+avg_buyin,float,Average buy-in (USD)
+bankroll_buyins,int,MANAGEMENT: starting bankroll measured in buy-ins (drives risk of ruin)
+itm_rate,float,"In-the-money rate over the sample (%) — near the paid fraction, weak skill signal"
+final_table_rate,float,Final-table rate (%) — a better skill signal than ITM
+win_rate,float,Outright win rate (%) — tiny even for the skilled
+biggest_cash_x,float,Largest single cash in buy-ins (deep-run luck)
+final_bankroll_bi,float,Ending bankroll in buy-ins (0 if broke)
+realized_roi,float,TARGET (regression): realized ROI over the sample (%)
+went_broke,int,TARGET (binary): 1 if the bankroll hit zero (risk of ruin)
+profitable,int,TARGET (binary): 1 if realized ROI > 0
